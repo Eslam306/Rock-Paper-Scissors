@@ -1,0 +1,33 @@
+import random
+
+while True:
+    print("make your choice: ")
+    choices = ['rock', 'paper', 'scissors']
+    choice = str(input())
+    print('my choice is: ', choice)
+    
+    
+    c_choice = random.choice(choices)
+    print('computer choice is: ', c_choice)
+    
+    if choice in choices:
+        if choice == c_choice:
+            print('it is tie')
+        if choice == 'rock':
+            if c_choice == 'scissors':
+                print('you won')
+            elif c_choice == 'paper':
+                print('computer won')
+        if choice == 'paper':
+            if c_choice == 'rock':
+                print('you won')
+            elif c_choice == 'scissors':
+                print('computer won')
+        if choice == 'scissors':
+            if c_choice == 'paper':
+                print('you won')
+            elif c_choice == 'rock':
+                print('computer won')
+            
+    else:
+        print('not valid string')
